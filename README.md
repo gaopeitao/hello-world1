@@ -1,2 +1,14 @@
 # hello-world1
 iamge processing 
+I=imread('gaopeitao.gif');
+预处理输入图像，得到初始结构平衡矩阵
+用matlab产生n个预先构建的结构平衡矩阵
+初始结构平衡矩阵分别与n个预先构建的结构平衡矩阵做Hadamard乘积，得到n个结构平衡矩阵
+分别提取每一个目标结构平衡矩阵的三个识别参数，构成参数识别向量组，进行目标分类
+readme-edits是在提取参数时加入了权值处理以后的结果
+readme-edits1是对输入图像进行梯度化处理以后的结果
+readme-edits2中参数识别方法采用三阶近邻判别分类
+readme-edits3采用一范数距离判别分类
+readme-one采用PCA主成分分析进行目标分类，思想是将图片成一个向量，再用一个转换模板提取向量中的主成分部分，再进行目标的分类
+readme-two采用fisherface进行目标分类，再主成分分析的基础上加入了线性判别分析处理
+readme-edits4在readme-edits2的基础上加入了Haar-like特征，将人脸的中心点对应的灰度值以及显著点作为局部特征脸来构成总的特征脸
